@@ -1,0 +1,19 @@
+@use 'variables' as vars;
+
+#why-coyote {
+  padding-block: vars.$space-xxl;
+
+  h1,
+  .subheading {
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: vars.$space-lg;
+    //color: vars.$color-primary;
+  }
+
+  .subheading {
+    font-size: vars.$font-size-md;
+  }
+}

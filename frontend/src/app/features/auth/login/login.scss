@@ -1,0 +1,18 @@
+@use 'variables' as vars;
+@use 'auth';
+
+:host {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+}
+
+.forgot-password {
+  font-size: vars.$font-size-sm;
+  color: vars.$color-gray;
+  //padding-left: vars.$space-xs;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

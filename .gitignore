@@ -1,0 +1,14 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files (not project-specific)
+.idea/
+*.sublime-workspace
+*.sublime-project
+.c9/
+*.launch
+.settings/
+.classpath
+.project

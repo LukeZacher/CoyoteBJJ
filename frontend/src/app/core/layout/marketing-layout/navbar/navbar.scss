@@ -1,0 +1,120 @@
+@use 'variables' as vars;
+
+nav {
+  background-color: vars.$color-dark-gray;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+  .navbar {
+    justify-content: space-between;
+    padding: 0.75rem;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: vars.$color-light-gray;
+
+    .left-logo {
+      gap: vars.$space-sm;
+    }
+
+    .right-links {
+      gap: vars.$space-lg;
+
+      a {
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:focus-visible {
+          outline: 2px solid vars.$color-neutral;
+          outline-offset: 4px;
+        }
+      }
+
+      li {
+        display: flex;
+      }
+
+      .page-links {
+        gap: vars.$space-lg;
+
+        a {
+          position: relative;
+          padding-block: vars.$space-sm;
+
+          // Underline on hover effect
+          &::after {
+            content: '';
+            display: inline-flex;
+            width: 80%;
+            justify-content: center;
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.6s ease;
+            background-color: vars.$color-white;
+            opacity: 0.6;
+          }
+
+          &:hover {
+            color: vars.$text-on-dark;
+
+            &::after {
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+
+      .action-btns {
+        gap: vars.$space-sm;
+
+        .action-btn {
+          padding: vars.$space-sm 0.75rem;
+          border-radius: vars.$radius-md;
+          font-size: vars.$font-size-base;
+
+          &.accent {
+            background-color: vars.$color-accent;
+          }
+
+          &.primary {
+            background-color: vars.$color-primary;
+          }
+        }
+      }
+
+      .social-links {
+        gap: 0.75rem;
+
+        a {
+          ng-icon {
+            transition: transform 0.2s ease;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+          }
+
+          &:hover {
+            color: vars.$color-white;
+
+            ng-icon {
+              transform: scale(1.08);
+            }
+          }
+
+          &:active {
+            ng-icon {
+              transform: scale(0.95);
+            }
+          }
+        }
+      }
+    }
+
+    li {
+      list-style: none;
+    }
+  }
+}

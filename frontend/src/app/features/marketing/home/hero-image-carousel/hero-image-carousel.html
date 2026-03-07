@@ -1,0 +1,35 @@
+<section class="hero-carousel">
+  <div class="background-img-wrapper">
+    @for (img of images; track img.url; let i = $index) {
+      <img
+        [ngSrc]="img.url"
+        fill
+        [priority]="i === 0"
+        [ngClass]="{ active: currentIndex() === i }"
+        [alt]="img.alt"
+      />
+    }
+  </div>
+  <div class="image-overlay"></div>
+  <div class="content-layer">
+    <h1>Coyote Brazilian Jiu-Jitsu</h1>
+    <p class="subheading">Gracie-affiliated jiu-jitsu gym in Omaha</p>
+    <ul class="benefits-row flex-align-center">
+      @for (benefit of benefits; track benefit) {
+        <li>{{ benefit }}</li>
+      }
+    </ul>
+    <div class="buttons-row flex-align-center">
+      <a href="#prime" class="btn btn-hover-glow free-class">Try A Free Class</a>
+      <a href="#twenty" class="btn btn-hover-glow contact">Contact Us</a>
+    </div>
+    <a href="#why-coyote" class="learn-more">
+      <span>Learn More</span>
+      <div class="down-arrow-row flex-align-center">
+        @for (i of [1, 2, 3]; track i) {
+          <ng-icon name="arrowDown" aria-hidden="true"></ng-icon>
+        }
+      </div>
+    </a>
+  </div>
+</section>

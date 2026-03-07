@@ -1,0 +1,41 @@
+@use 'variables' as vars;
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-pos-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hover-pointer {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// White overlay hover effect
+.btn-hover-glow {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: vars.$color-white;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0.15;
+    }
+  }
+}

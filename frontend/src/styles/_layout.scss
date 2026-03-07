@@ -1,0 +1,16 @@
+@use 'variables' as vars;
+
+.container,
+.container-sm {
+  width: 100%;
+  margin-inline: auto; // Centers container
+  padding-inline: vars.$container-padding; // Prevents hitting screen edge on mobile
+}
+
+.container {
+  max-width: vars.$container-max-width;
+}
+
+.container-sm {
+  max-width: vars.$container-max-width-sm;
+}

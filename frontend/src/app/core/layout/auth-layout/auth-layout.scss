@@ -1,0 +1,43 @@
+@use 'variables' as vars;
+@use 'mixins' as mix;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  padding-block: vars.$space-md;
+  background-color: vars.$color-dark-gray;
+  color: vars.$color-light-gray;
+
+  .container-sm {
+    display: grid;
+    place-items: center;
+  }
+}
+
+main {
+  flex: 1;
+}
+
+.auth-wrapper {
+  @include mix.flex-pos-center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  isolation: isolate;
+
+  .bg-image {
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+}

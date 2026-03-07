@@ -1,0 +1,59 @@
+@use 'variables' as vars;
+
+.auth-card {
+  background-color: vars.$bg-site;
+  padding: vars.$space-xl 2.5rem;
+  border-radius: vars.$radius-lg;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+h1 {
+  margin-bottom: vars.$space-lg;
+  color: vars.$color-accent;
+  text-align: center;
+}
+
+form,
+.inputs,
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  align-items: center;
+}
+
+.inputs {
+  gap: vars.$space-md;
+  margin-bottom: vars.$space-lg;
+  width: 100%;
+
+  .input {
+    gap: vars.$space-sm;
+  }
+}
+
+label {
+  color: vars.$color-dark-gray;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: vars.$space-sm 0.75rem;
+  border-radius: vars.$radius-md;
+}
+
+button {
+  padding: vars.$space-sm vars.$space-md;
+  border-radius: vars.$radius-md;
+  font-size: vars.$font-size-md;
+  display: flex;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  background-color: vars.$color-neutral;
+}

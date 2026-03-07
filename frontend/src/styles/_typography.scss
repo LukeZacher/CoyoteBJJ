@@ -1,0 +1,57 @@
+@use 'variables' as vars;
+
+body {
+  font-family:
+    'Lato',
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-size: vars.$font-size-base;
+  font-weight: 400;
+  color: vars.$text-main;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family:
+    'Outfit',
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Robot,
+    Helvetica,
+    Arial,
+    sans-serif;
+  color: vars.$text-heading;
+}
+
+h1 {
+  font-size: vars.$font-size-hero;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+h2 {
+  font-size: vars.$font-size-xxl;
+  font-weight: 800;
+  color: vars.$color-primary;
+}
+h3 {
+  font-size: vars.$font-size-xl;
+  font-weight: 700;
+}
+h4 {
+  font-size: vars.$font-size-lg;
+  font-weight: 700;
+}
+
+.text-small {
+  font-size: vars.$font-size-sm;
+}
